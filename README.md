@@ -8,7 +8,7 @@ If you need an option to logout to your desktop environment or window manager yo
 
 
 # Dependencies
-- Systemd
+- OpenRC
 
 
 # Installation
