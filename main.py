@@ -64,19 +64,18 @@ class ExecuteSession(EventListener):
         option = data["option"]
 
 
-        if option == 0: command = "systemctl poweroff"
-        if option == 1: command = "systemctl reboot"
-        if option == 2: command = "systemctl suspend"
-        if option == 3: command = "systemctl hibernate"
+        if option == 0: command = "sudo shutdown -h now"
+        if option == 1: command = "sudo reboot"
+        if option == 2: command = "sudo pm-suspend"
+        if option == 3: command = "sudo pm-hibernate"
         if option == 4:
-
             desktopEnvironment = extension.preferences["desktop-environment"]
 
             if desktopEnvironment == "gnome": command = "gnome-session-quit --no-prompt"
             if desktopEnvironment == "kde": command = "qdbus org.kde.ksmserver /KSMServer logout 0 0 1"
             if desktopEnvironment == "other": command = extension.preferences["other_logout"]
 
-        subprocess.run( [command], shell=True )
+        subprocess.run([command], shell=True)
 
         return HideWindowAction()
 
