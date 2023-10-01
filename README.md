@@ -14,4 +14,4 @@ If you need an option to logout to your desktop environment or window manager yo
 # Installation
 Just go to ulauncher extensions tab and paste the repo link to it.
 
-    https://github.com/lighttigerXIV/ulauncher-session-manager
+    https://github.com/IUseDebianBtw/ulauncher-session-manager-openrc
